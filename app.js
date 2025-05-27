@@ -4,11 +4,11 @@ import employees from "#db/employees";
 const app = express();
 
 app.get("/", (req, res) => {
-  res.json("Hello employees!");
+  res.send("Hello employees!");
 });
 
 app.get("/employees", (req, res, next) => {
-  res.json({ employees });
+  res.send(employees);
 });
 
 app.get("/employees/random", (req, res, next) => {
